@@ -162,14 +162,9 @@ text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40
     }
     html{
       font-size: smaller;
-      background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/10/City-iPhone-Backgrounds-1080x1920.jpg");
-      background-size: fixed;
-      background-repeat:no-repeat;
-      background-position:center;
-      -moz-background-size: fixed;
-      -o-background-size: fixed;
-      -webkit-background-size: fixed;
-      -ms-content-zooming: none;
+      background-image: none;
+      background-color: black
+      
     }
     .sidebar{
       width:100vw;
@@ -192,14 +187,8 @@ text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40
     }
     html{
       font-size: small;
-      background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/10/City-iPhone-Backgrounds-1080x1920.jpg");
-      background-size: fixed;
-      background-repeat:no-repeat;
-      background-position:center;
-      -moz-background-size: fixed;
-      -o-background-size: fixed;
-      -webkit-background-size: fixed;
-      -ms-content-zooming: none;
+      background-image: none;
+      background-color: black
     }
     .sidebar{
       width:100vw;
