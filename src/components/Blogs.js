@@ -26,7 +26,6 @@ class Blogs extends React.Component {
             Link="https://medium.com/@tyler.soohoo/a-project-gone-south-e2109dd08be9"
           />
           <br className="breaks" />
-
         </div>
       </div>
     );

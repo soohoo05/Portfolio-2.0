@@ -1,7 +1,13 @@
 import React from "react";
 import "./CSS/App.css";
 import "./CSS/Hamburger.css";
-import { Blogs, Contact, Projects, About, SideBar } from "./components/index.js";
+import {
+  Blogs,
+  Contact,
+  Projects,
+  About,
+  SideBar
+} from "./components/index.js";
 import scrollToComponent from "react-scroll-to-component";
 import ScrollUpButton from "react-scroll-up-button";
 class App extends React.Component {
@@ -9,22 +15,21 @@ class App extends React.Component {
     sidebarOpen: false
   };
   scrollHandler = theComponent => {
-
     switch (theComponent) {
       case "about":
-        scrollToComponent(this.about,{duration:1500,offset:-200});
+        scrollToComponent(this.about, { duration: 1500, offset: -200 });
         this.burgerHandler();
         break;
       case "projects":
-        scrollToComponent(this.projects,{duration:1500,offset:-200});
+        scrollToComponent(this.projects, { duration: 1500, offset: -200 });
         this.burgerHandler();
         break;
       case "blogs":
-        scrollToComponent(this.blogs,{duration:1500,offset:-200});
+        scrollToComponent(this.blogs, { duration: 1500, offset: -200 });
         this.burgerHandler();
         break;
       case "contact":
-        scrollToComponent(this.contact,{duration:1500,offset:-200});
+        scrollToComponent(this.contact, { duration: 1500, offset: -200 });
         this.burgerHandler();
         break;
       default:
@@ -34,14 +39,14 @@ class App extends React.Component {
   burgerHandler = () => {
     var menu = document.getElementById("menu");
     var body = document.querySelector("body");
-    var root = document.querySelector(".theSideBar")
+    var root = document.querySelector(".theSideBar");
     if (this.state.sidebarOpen) {
-      root.style.zIndex=-1
+      root.style.zIndex = -1;
       menu.style.visibility = "visible";
       body.style.overflow = "scroll";
       this.setState({ sidebarOpen: false });
     } else {
-      root.style.zIndex=1
+      root.style.zIndex = 1;
       body.style.overflow = "hidden";
       menu.style.visibility = "hidden";
       this.setState({ sidebarOpen: true });
@@ -87,10 +92,13 @@ class App extends React.Component {
     }
   };
   render() {
-
     return (
       <div className="App">
-        <SideBar burgerHandler={this.burgerHandler} scrollHandler={this.scrollHandler} sidebarOpen={this.state.sidebarOpen}/>
+        <SideBar
+          burgerHandler={this.burgerHandler}
+          scrollHandler={this.scrollHandler}
+          sidebarOpen={this.state.sidebarOpen}
+        />
         {this.navSelector()}
         <ScrollUpButton />
         <About

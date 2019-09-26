@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import Sidebar from "react-sidebar";
 
 class SideBar extends React.Component {
@@ -8,71 +8,72 @@ class SideBar extends React.Component {
         background: "white",
         zIndex: 3
       },
-      overlay:{
+      overlay: {
         zIndex: -1
       },
       content: {
         zIndex: -1
       },
-      root:{
+      root: {
         zIndex: -1
       }
     };
     return (
       <Sidebar
         rootClassName="theSideBar"
-      sidebar={
-        <div className="sidebar">
-          <button
-            onClick={() => this.props.burgerHandler()}
-            className="hamburger hamburger--vortex is-active"
-            type="button"
-          >
-            <span className="hamburger-box">
-              <span className="hamburger-inner" />
-            </span>
-          </button>
-          <br className="breaks" />
-          <b>Menu</b>
-          <br className="breaks" />
-          <div className="scrollButtons">
+        sidebar={
+          <div className="sidebar">
             <button
-              className="scrollButton"
-              onClick={() => this.props.scrollHandler("about")}
+              onClick={() => this.props.burgerHandler()}
+              className="hamburger hamburger--vortex is-active"
+              type="button"
             >
-              About
+              <span className="hamburger-box">
+                <span className="hamburger-inner" />
+              </span>
             </button>
             <br className="breaks" />
-
-            <button
-              className="scrollButton"
-              onClick={() => this.props.scrollHandler("projects")}
-            >
-              Projects
-            </button>
+            <b>Menu</b>
             <br className="breaks" />
+            <div className="scrollButtons">
+              <button
+                className="scrollButton"
+                onClick={() => this.props.scrollHandler("about")}
+              >
+                About
+              </button>
+              <br className="breaks" />
 
-            <button
-              className="scrollButton"
-              onClick={() => this.props.scrollHandler("blogs")}
-            >
-              Blogs
-            </button>
-            <br className="breaks" />
+              <button
+                className="scrollButton"
+                onClick={() => this.props.scrollHandler("projects")}
+              >
+                Projects
+              </button>
+              <br className="breaks" />
 
-            <button
-              className="scrollButton"
-              onClick={() => this.props.scrollHandler("contact")}
-            >
-              Contact
-            </button>
+              <button
+                className="scrollButton"
+                onClick={() => this.props.scrollHandler("blogs")}
+              >
+                Blogs
+              </button>
+              <br className="breaks" />
+
+              <button
+                className="scrollButton"
+                onClick={() => this.props.scrollHandler("contact")}
+              >
+                Contact
+              </button>
+            </div>
           </div>
-        </div>
-      }
-      open={this.props.sidebarOpen}
-      onSetOpen={this.onSetSidebarOpen}
-      styles={theStyles}
-    ></Sidebar>)
+        }
+        open={this.props.sidebarOpen}
+        onSetOpen={this.onSetSidebarOpen}
+        styles={theStyles}
+      ></Sidebar>
+    );
   }
 }
 
