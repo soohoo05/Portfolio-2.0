@@ -16,7 +16,9 @@ class About extends React.Component {
             <img className="logos" onClick={()=>window.open("https://docs.google.com/document/d/1i5xcsRr4KBbDrOTMSkElQw1MNLN1b_xbVK0TnSQE4no/edit#")} width="150px" height="150px" alt="resume" src="https://ancorp.com/wp-content/uploads/2019/05/resume-icon-16.png" />
       </div>
 
-      <h1 className="Header">About Me</h1>
+      <h1 className="Header" ref={section => {
+        this.about = section;
+      }}>About Me</h1>
         <div className="aboutDiv">
           <p className="aboutParagraph">
             My name is Tyler Soo Hoo. I'm a Full Stack Web Developer with a

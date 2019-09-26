@@ -12,19 +12,19 @@ class App extends React.Component {
 
     switch (theComponent) {
       case "about":
-        scrollToComponent(this.about,{duration:1500});
+        scrollToComponent(this.about,{duration:1500,offset:-200});
         this.burgerHandler();
         break;
       case "projects":
-        scrollToComponent(this.projects,{duration:1500});
+        scrollToComponent(this.projects,{duration:1500,offset:-200});
         this.burgerHandler();
         break;
       case "blogs":
-        scrollToComponent(this.blogs,{duration:1500});
+        scrollToComponent(this.blogs,{duration:1500,offset:-200});
         this.burgerHandler();
         break;
       case "contact":
-        scrollToComponent(this.contact,{duration:1500});
+        scrollToComponent(this.contact,{duration:1500,offset:-200});
         this.burgerHandler();
         break;
       default:
