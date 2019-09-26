@@ -14,6 +14,9 @@ html{
      -ms-overflow-style: none;
      scrollbar-width: none;
 }
+html::-webkit-scrollbar{
+  display :none
+}
 a {
    outline: 0;
 }
@@ -79,6 +82,12 @@ a {
      -ms-overflow-style: none;
      scrollbar-width: none;
      overflow-x: hidden;
+}
+.aboutDiv::-webkit-scrollbar{
+  display :none
+}
+.Header::-webkit-scrollbar{
+  display :none
 }
 .dark{
   padding-top: 20px;
