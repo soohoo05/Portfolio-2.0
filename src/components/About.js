@@ -1,16 +1,19 @@
 import React from "react";
-
+import Fade from 'react-reveal/Fade';
 class About extends React.Component {
   render() {
     return (
       <div className={`wholeForm ${this.props.dark}`}>
         <div className="profile">
+          <Fade>
           <img
             className="proPic"
             src="https://res.cloudinary.com/dz1dbcszc/image/upload/r_30/a_360/v1547583518/img_0552_1.jpg"
             alt="profile"
           />
+      </Fade>
         </div>
+        <Fade>
         <div className="Links">
           <div>
             <img
@@ -55,6 +58,8 @@ class About extends React.Component {
             src="https://ancorp.com/wp-content/uploads/2019/05/resume-icon-16.png"
           />
         </div>
+      </Fade>
+      <Fade>
 
         <h1
           className="Header"
@@ -78,6 +83,8 @@ class About extends React.Component {
             students and assist them in learning to program.
           </p>
         </div>
+      </Fade>
+        
       </div>
     );
   }

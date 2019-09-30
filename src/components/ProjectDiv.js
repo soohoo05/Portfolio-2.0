@@ -1,9 +1,19 @@
 import React from "react";
+import Fade from 'react-reveal/Fade';
 
 class ProjectDiv extends React.Component {
+  state={
+    seeMore:false
+  }
+  seeToggle = () =>{
+    this.setState({
+      seeMore:!this.state.seeMore
+    })
+  }
   render() {
     return (
       <div className="indProject">
+        <div>
         {this.props.Website.length !== 0 ? (
           <h1
             onClick={() => window.open(this.props.Website)}
@@ -30,6 +40,12 @@ class ProjectDiv extends React.Component {
             className="githubicon projectDivComponents"
           />
         ) : null}
+      </div>
+        <button className="seeMoreButton" onClick={()=>this.seeToggle()}>See More</button>
+        <br className="breaks"/>
+        {this.state.seeMore ? <Fade><p>{this.props.description}</p></Fade> :null}
+          <br className="breaks"/>
+
       </div>
     );
   }

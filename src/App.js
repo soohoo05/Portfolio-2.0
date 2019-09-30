@@ -1,4 +1,6 @@
 import React from "react";
+import Zoom from 'react-reveal/Zoom';
+import Fade from 'react-reveal/Fade';
 import "./CSS/App.css";
 import "./CSS/Hamburger.css";
 import {
@@ -66,17 +68,23 @@ class App extends React.Component {
               <span className="hamburger-inner" />
             </span>
           </button>
+          <Zoom>
           <div className="nameDiv">
             <h1 className="Name">Tyler Soo Hoo</h1>
           </div>
+        </Zoom>
         </div>
       );
     } else {
       return (
         <div className="NavBar">
           <div className="nameDiv">
+            <Zoom>
+
             <h1 className="Name">Tyler Soo Hoo</h1>
+          </Zoom>
           </div>
+
           <button
             id="menu"
             onClick={() => this.burgerHandler()}
@@ -101,30 +109,44 @@ class App extends React.Component {
         />
         {this.navSelector()}
         <ScrollUpButton />
+        <Fade>
         <About
           dark="dark"
           ref={section => {
             this.about = section;
           }}
         />
+      </Fade>
+
+        <Fade>
+
         <Projects
           dark="light"
           ref={section => {
             this.projects = section;
           }}
         />
+      </Fade>
+
+        <Fade>
+
         <Blogs
           dark="dark"
           ref={section => {
             this.blogs = section;
           }}
         />
+      </Fade>
+
+        <Fade>
+
         <Contact
           dark="light"
           ref={section => {
             this.contact = section;
           }}
         />
+    </Fade>
       </div>
     );
   }
